@@ -372,10 +372,12 @@
       <line class="corda-ponta" x1="29.6" y1="17" x2="36" y2="17" stroke-width="1"/>
       <g class="corda-fibras" stroke-width=".45" opacity="0"></g>
     </g>
-    <g class="arco-flecha">
-      <line x1="20" y1="6" x2="20" y2="35" stroke="#6E5A48" stroke-width="1.8"/>
-      <path d="M20 1 L16.5 8 H23.5 Z" fill="#7D858A"/>
-      <path d="M20 29 L16.5 33 V37 L20 33.5 L23.5 37 V33 Z" fill="#9A4A2E"/>
+    <!-- a flecha é desenhada com o encaixe (nock) no y=0 e depois colocada em cima da corda pelo site.js -->
+    <g class="arco-flecha" transform="translate(0 17)">
+      <line x1="20" y1="-25" x2="20" y2="-0.5" stroke="#6E5A48" stroke-width="1.8"/>
+      <path d="M20 -31 L16.5 -24 H23.5 Z" fill="#7D858A"/>
+      <path d="M20 -9 L16.5 -5.5 V-2 L20 -4.5 L23.5 -2 V-5.5 Z" fill="#9A4A2E"/>
+      <path d="M18.6 0.4 L18.6 -1.6 H21.4 V0.4 L20 -0.8 Z" fill="#2B1D14"/>
     </g>
     </g></g>
   </svg>

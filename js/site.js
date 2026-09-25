@@ -1066,7 +1066,7 @@ function desenharArco(puxao, desgaste) {
     return `<path d="M${f(o.x)} ${f(o.y)} Q${f(o.x + dx * abre * 0.8)} ${f(o.y)} ${f(fx)} ${f(fy)}"/>`;
   }).join("");
 
-  flechaArco.setAttribute("transform", `translate(0 ${(24 * p).toFixed(1)})`);
+  flechaArco.setAttribute("transform", `translate(0 ${centro.y.toFixed(1)})`);   // o encaixe da flecha fica na corda
   sobeArco.setAttribute("transform", `translate(0 ${(-20 * p).toFixed(1)})`);   // sobe para a flecha não sair da tela
   botaoTopo.classList.toggle("quase-arrebentando", desgaste > 0.85);
 }
