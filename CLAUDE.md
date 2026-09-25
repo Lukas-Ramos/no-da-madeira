@@ -51,7 +51,8 @@ a flecha voa em curva até um alvo de tronco no topo). Conforme a rolagem desce,
 
 - Tudo pronto e funcionando. **Produtos, preços, projetos e restaurações são EXEMPLOS inventados**:
   o dono precisa trocar pelos reais e colocar as fotos.
-- Ainda não está no Git nem publicado. Foi sugerido: `git init`, GitHub, e GitHub Pages ou Netlify.
+- Publicado no GitHub Pages: https://lukas-ramos.github.io/no-da-madeira/ (repositório
+  https://github.com/Lukas-Ramos/no-da-madeira, branch `main`, pasta raiz). Cada `git push` atualiza o site em ~1 min.
 - Frase de envio "Para outras cidades, consulte o envio" é neutra: o dono não confirmou se envia pelos Correios.
 - Ideias sugeridas e ainda não feitas: depoimentos de clientes, imagem `og:image` para a prévia do link no
   WhatsApp (depende do endereço final), domínio próprio (nodamadeira.com.br), Google Meu Negócio.
