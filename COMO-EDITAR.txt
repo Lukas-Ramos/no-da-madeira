@@ -1,0 +1,95 @@
+SITE NÓ DA MADEIRA: COMO EDITAR E PUBLICAR
+===========================================
+
+COMO A PASTA ESTÁ ORGANIZADA
+
+  index.html            A página (estrutura e textos fixos das seções)
+  css/estilo.css        Cores, fontes e aparência
+  js/configuracao.js    SEUS DADOS: WhatsApp, produtos, preços, projetos, restaurações
+  js/site.js            O funcionamento (não precisa mexer)
+  fotos/produtos/       Fotos das peças à venda
+  fotos/projetos/       Fotos dos projetos já entregues
+  fotos/luminarias/     Fotos das luminárias
+  fotos/restauracao/    Fotos de antes e depois das restaurações
+
+No dia a dia você só vai mexer em js/configuracao.js e na pasta fotos.
+Para editar, clique com o botão direito no arquivo > Abrir com > Bloco de Notas
+(ou instale o VS Code, que é gratuito e mostra os erros em cores).
+
+
+COMO COLOCAR FOTOS
+
+1. Reduza o tamanho da foto antes. Foto de celular tem 3 a 8 MB e deixa o
+   site lento. Use https://squoosh.app (gratuito): arraste a foto, escolha
+   largura 1600 e salve. O ideal é cada foto ter menos de 400 KB.
+
+2. Dê um nome simples, SEM espaço e SEM acento:
+     certo:   mesa-jatoba-1.jpg
+     errado:  Mesa de Jatobá (1).JPG
+
+3. Coloque o arquivo na pasta certa (fotos/produtos, fotos/luminarias, fotos/projetos ou
+   fotos/restauracao).
+
+4. Escreva o caminho no js/configuracao.js. Exemplos:
+
+   Produto:
+     { nome: "Gamela entalhada", tipo: "Utensílios", preco: 220, madeira: "Cumaru",
+       texto: "Escavada à mão...", foto: "fotos/produtos/gamela-1.jpg" },
+
+   Projeto com várias fotos:
+     {
+       titulo: "Mesa de jantar para 8 lugares",
+       descricao: "Tampo de jatobá com 2,20 m.",
+       madeira: "Jatobá",
+       fotos: [
+         "fotos/projetos/mesa-1.jpg",
+         "fotos/projetos/mesa-2.jpg",
+         "fotos/projetos/mesa-3.jpg",
+       ],
+     },
+
+   Restauração:
+     { titulo: "Plaina nº 5", tipo: "Ferramenta", descricao: "...",
+       antes: "fotos/restauracao/plaina-antes.jpg",
+       depois: "fotos/restauracao/plaina-depois.jpg" },
+
+Enquanto um item não tem foto, o site mostra um desenho de madeira no lugar.
+Se você escreveu o nome da foto errado, também aparece o desenho.
+Confira se o nome no arquivo e no configuracao.js são iguais
+(maiúsculas e minúsculas contam: .JPG é diferente de .jpg).
+
+
+ANTES DE PUBLICAR
+
+[ ] Trocar os produtos e preços de exemplo pelos seus
+[ ] Trocar as luminárias de exemplo pelas suas
+[ ] Trocar os projetos de exemplo pelos seus (ou apagar os que não tiver)
+[ ] Trocar as restaurações de exemplo pelas suas
+[ ] Colocar o link do Instagram (se tiver)
+[ ] Conferir a frase de localização e envio (campo "local" no configuracao.js)
+[ ] Abrir o index.html no navegador e testar os botões de WhatsApp
+
+
+COMO PUBLICAR (GRÁTIS)
+
+O site é feito só com HTML, CSS e JavaScript. Não precisa de servidor,
+banco de dados nem mensalidade de hospedagem.
+
+Jeito mais fácil, pelo Netlify:
+  1. Entre em https://app.netlify.com/drop e crie uma conta grátis
+  2. Arraste a pasta site-marcenaria inteira para a página
+  3. Pronto: ele gera um endereço tipo nome-qualquer.netlify.app
+     (dá para trocar o nome em Site settings > Change site name)
+
+Para atualizar depois (fotos novas, preços), edite os arquivos no seu
+computador e arraste a pasta de novo em Deploys.
+
+Se quiser um endereço próprio (ex.: nodamadeira.com.br), registre o domínio
+no registro.br (cerca de R$ 40 por ano) e ligue ao Netlify em Domain settings.
+
+
+SE ALGO SUMIR DO SITE DEPOIS DE EDITAR
+
+Quase sempre é uma aspa ou uma vírgula faltando no configuracao.js.
+No navegador, aperte F12 e abra a aba Console: a mensagem em vermelho
+mostra a linha do erro.
